@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -47,24 +48,24 @@
         android:id="@+id/et_origen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Origen"
-
-        android:padding="16dp"
         android:layout_marginBottom="16dp"
-        android:textColor="#000000"
-         />
+
+        android:drawableRight="@drawable/baseline_airplane_ticket_24"
+        android:hint="Origen"
+        android:padding="16dp"
+        android:textColor="#000000" />
 
     <!-- Campo de Destino -->
     <EditText
         android:id="@+id/et_destino"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Destino"
-
-        android:padding="16dp"
         android:layout_marginBottom="16dp"
-        android:textColor="#000000"
-        />
+
+        android:drawableRight="@drawable/baseline_edit_location_24"
+        android:hint="Destino"
+        android:padding="16dp"
+        android:textColor="#000000" />
 
     <!-- Fechas -->
     <LinearLayout
@@ -74,30 +75,27 @@
         android:layout_marginBottom="16dp">
 
         <EditText
-            android:id="@+id/et_fecha_ida"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:id="@+id/dt_fechaida"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Fecha ida"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/baseline_calendar_month_24"
+            android:ems="10"
+            android:inputType="date" />
 
-            android:padding="16dp"
-            android:textColor="#000000"
-             />
+        <EditText
+            android:id="@+id/dt_fechav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/baseline_calendar_month_24"
+            android:ems="10"
+            android:inputType="date" />
 
         <Space
             android:layout_width="8dp"
             android:layout_height="wrap_content" />
 
-        <EditText
-            android:id="@+id/et_fecha_vuelta"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:hint="Fecha vuelta"
-
-            android:padding="16dp"
-            android:textColor="#000000"
-             />
     </LinearLayout>
 
     <!-- Selector de Clase -->
@@ -105,7 +103,7 @@
         android:id="@+id/spn_clase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:entries="@array/spn_clase"
         android:padding="16dp"
         android:layout_marginBottom="16dp" />
 
@@ -130,14 +128,16 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
 
-            android:layout_marginStart="8dp" />
+            android:layout_marginStart="8dp"
+            android:background="@drawable/baseline_exposure_plus_1_24" />
 
         <ImageButton
             android:id="@+id/btn_remover_adulto"
             android:layout_width="48dp"
             android:layout_height="48dp"
 
-            android:layout_marginStart="8dp" />
+            android:layout_marginStart="8dp"
+            android:background="@drawable/baseline_exposure_neg_1_24" />
     </LinearLayout>
 
     <!-- Checkbox para usar puntos -->
@@ -150,15 +150,77 @@
         android:layout_marginBottom="16dp" />
 
     <!-- Botón de búsqueda -->
+
     <Button
         android:id="@+id/btn_buscar_vuelos"
-        android:layout_width="match_parent"
+        android:layout_width="381dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/design_default_color_error"
+        android:backgroundTint="@color/rosa"
+        android:drawableLeft="@drawable/baseline_check_24"
         android:elevation="4dp"
         android:padding="16dp"
-        android:text="Buscar vuelos"
+
+        android:text="@string/btn_buscar_vuelos"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:backgroundTint="#0D0505">
+
+        <LinearLayout
+            android:layout_width="77dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/baseline_home_filled_24"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="82dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/baseline_language_24"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="72dp"
+            android:layout_height="59dp"
+            android:background="@drawable/baseline_backpack_24"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="86dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/baseline_campaign_24"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/baseline_workspace_premium_24"
+            android:orientation="horizontal"></LinearLayout>
+    </TableRow>
+
 </LinearLayout>
 

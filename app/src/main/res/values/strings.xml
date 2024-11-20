@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">DAM_UC3_Sanchez_Tucta</string>
+    <string name="textView_segundo">Texto 02\n</string>
+    <string name="btn_buscar_vuelos">Buscar vuelos</string>
+    <string name="Fecha_ida">id_fechaida</string>
+
+    <string-array name="spn_clase">
+    <item>Economico</item>
+    <item>Empresarial</item>
+    <item>Bussiness</item>
+    </string-array>
+
 </resources>
